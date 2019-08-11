@@ -1,7 +1,18 @@
 import React from 'react'
+import Img from './Img'
+
+var $ = require('jquery')
 
 export default class App extends React.Component {
+  constructor (props) {
+      super(props);
+  }
+
   render () {
-    return <p> Hello React!! </p>
+    return (
+      <div>
+        <Img />
+      </div>
+    )
   }
 }

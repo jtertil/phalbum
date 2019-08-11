@@ -1,3 +1,6 @@
+import random
+import os
+
 from flask import Flask, render_template
 
 app = Flask(
@@ -12,11 +15,14 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/python")
-def hello():
-    return "Hello Python!!"
+@app.route("/img_list")
+def img_list():
+    return random.choice(get_img_list())
+
+
+def get_img_list():
+    return os.listdir("../frontend/dist/img")
 
 
 if __name__ == "__main__":
     app.run()
-
