@@ -38,8 +38,8 @@ export default class Img extends React.Component {
   render () {
     return (
       <Container>
-        <div className='pt-2' style={contStyle}>
-          <Image className='mx-auto d-block' style={imgStyle} src={this.state.imgPath} />
+        <div style={contStyle}>
+          <Image className='mx-auto d-block pt-2' style={imgStyle} src={this.state.imgPath} />
         </div>
         <div>
           <hr />
